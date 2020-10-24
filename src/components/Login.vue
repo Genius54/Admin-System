@@ -49,7 +49,6 @@
       methods:{
           login(){
             this.$refs.loginFormRef.validate(async valid=>{
-            /*console.log(valid)*/
               if(!valid) return
               else {
                 const {data:result} =await this.$http.post("login",this.loginForm);
@@ -58,7 +57,7 @@
                 }else{
                   window.sessionStorage.setItem("token",result.data.token);
                   this.$message.success("登录成功！");
-                  this.$router.push('/home');
+                  await this.$router.push('/home');
                 }
               }
             })
