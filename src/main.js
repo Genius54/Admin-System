@@ -7,6 +7,9 @@ import './assets/css/global.css'
 import './plugins/element.js'
 import axios from 'axios'
 import less from 'less'
+import TreeTable from 'vue-table-with-tree-grid'
+
+Vue.component('tree-table',TreeTable)
 
 Vue.config.productionTip = false
 //配置请求的genlujing
